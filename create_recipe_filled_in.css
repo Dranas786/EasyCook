@@ -1,0 +1,482 @@
+#back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: none;
+    background-color: unset;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#back-button-icon {
+    border: none;
+    background-color: none;
+    width: 50px;
+    height: 50px;
+}
+
+#create-recipe-filled-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#create-recipe-filled-h1 {
+    font-size: 35px;
+    font-weight: 900;
+    position: absolute;
+    top: 20px;
+    left: 430px;
+}
+
+#recipe-title-filled {
+    font-size: 25px;
+    font-weight: 300;
+    position: absolute;
+    top: 85px;
+    left: 100px;
+}
+
+#recipe-title-filled-input {
+    font-family: 'Inter';
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 8px;
+    width: 500px;
+    position: absolute;
+    top: 85px;
+    left: 270px;
+    color: black;
+}
+
+.visibility-toggle-filled {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 85px;
+    left: 815px;
+}
+
+.toggle-filled {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-filled input {
+    display: none;
+}
+
+.slider-filled {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider-filled:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #9747FF;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+#toggleText-filled {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #9747FF;
+}
+
+#recipe-cover-filled {
+    font-size: 25px;
+    font-weight: 300;
+    position: absolute;
+    top: 140px;
+    left: 100px;
+}
+
+.recipe-cover-drop-zone-filled {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 180px;
+    left: 100px;
+    width: 870px;
+    height: 250px;
+    border: dashed;
+    border-radius: 15px;
+}
+
+#uploaded-image-static {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#upload-message {
+    font-family: 'Inter';
+    font-weight: 600;
+    color: #9747FF;
+    background-color: #FFFFFF;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#recipe-description {
+    font-size: 25px;
+    font-weight: 300;
+    position: absolute;
+    top: 465px;
+    left: 100px;
+}
+
+#recipe-description-input {
+    font-family: 'Inter';
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 8px;
+    height:100px;
+    width: 605px;
+    position: absolute;
+    top: 465px;
+    left: 350px;
+    white-space: pre-wrap;
+    overflow-y: auto; 
+    resize: none; 
+}
+
+#recipe-category-question {
+    font-size: 25px;
+    font-weight: 300;
+    position: absolute;
+    top: 605px;
+    left: 100px;
+}
+
+#recipe-category-select {
+    position: absolute;
+    top: 650px;
+    left: 100px;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 4px;
+    font-family: 'Inter';
+    font-weight: 700;
+}
+
+#recipe-ingredients {
+    font-size: 25px;
+    font-weight: 300;
+    position: absolute;
+    top: 705px;
+    left: 100px;
+}
+
+#recipe-ingredients-input {
+    font-family: 'Inter';
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 8px;
+    width: 605px;
+    position: absolute;
+    top: 705px;
+    left: 350px;
+}
+
+#ingredients-list {
+    width: 870px;
+    max-height: 60px;
+    overflow-y: auto;
+    position: absolute;
+    left: 100px;
+    top: 745px;
+}
+
+.ingredient-tag {
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: #000000 2px;
+    font-size: 14px;
+}
+
+.remove-button {
+    margin-left: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #ed0a0a;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#recipe-measurements {
+    font-size: 25px;
+    font-weight: 300;
+    position: absolute;
+    top: 825px;
+    left: 100px;
+}
+
+#measurements-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 870px;
+    max-height: 175px;
+    overflow-y: auto;
+    position: absolute;
+    top: 870px;
+    left: 100px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.measurement-input {
+    font-family: 'Inter';
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 4px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 155px;
+}
+
+#recipe-instructions {
+    font-size: 25px;
+    font-weight: 300;
+    position: absolute;
+    top: 1060px;
+    left: 100px;
+}
+
+#instructions-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 1100px;
+    left: 100px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#add-step-button {
+    display: flex;
+    flex-direction: row;
+    padding-top: 12px;
+    font-weight: 900;
+    width: 200px;
+    border: none;
+    background-color: #FFFFFF;
+}
+
+#add-step-icon {
+    width: 15px;
+    height: 15px;
+    font-weight: 900;
+    margin-right: 10px;
+    padding-top: 2px;
+}
+
+#add-step-title {
+    font-weight: 900;
+}
+
+.recipe-step-input-container span {
+    font-weight: 900;
+    margin-right: 15px;
+}
+
+.recipe-step-input {
+    font-family: 'Inter';
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 4px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    width: 480px;
+}
+
+.recipe-image-input {
+    background-color: #FFFFFF;
+    border:#9747FF;
+}
+
+#recipe-prep-time {
+    font-size: 25px;
+    font-weight: 300;
+    position: absolute;
+    top: 1320px;
+    left: 100px;
+}
+
+#prep-time-input {
+    font-family: 'Inter';
+    position: absolute;
+    top: 1365px;
+    left: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 4px;
+    margin-bottom: 10px;
+    width: 155px;
+}
+
+#recipe-cook-time {
+    font-size: 25px;
+    font-weight: 300;
+    position: absolute;
+    top: 1425px;
+    left: 100px;
+}
+
+#cook-time-input {
+    font-family: 'Inter';
+    position: absolute;
+    top: 1465px;
+    left: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 4px;
+    margin-bottom: 10px;
+    width: 155px;
+}
+
+#recipe-total-time {
+    font-size: 25px;
+    font-weight: 300;
+    position: absolute;
+    top: 1525px;
+    left: 100px;
+}
+
+#cook-total-input {
+    font-family: 'Inter';
+    position: absolute;
+    top: 1565px;
+    left: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 4px;
+    margin-bottom: 10px;
+    width: 155px;
+}
+
+#recipe-restriction-question {
+    font-size: 25px;
+    font-weight: 300;
+    position: absolute;
+    top: 1625px;
+    left: 100px;
+}
+
+#recipe-restriction-checkboxes {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 1670px;
+    left: 100px;
+}
+
+#recipe-restriction-checkboxes label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#recipe-restriction-checkboxes input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#recipe-restriction-message {
+    font-size: 14px;
+    font-weight: 300;
+    position: absolute;
+    top: 1805px;
+    left: 100px;
+}
+
+#draft-button {
+    position: absolute;
+    top: 1840px;
+    left: 425px;
+    width: 100px;
+    height: 40px;
+    color:#FFFFFF;
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 16px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 15px;
+}
+
+#publish-button {
+    position: absolute;
+    top: 1840px;
+    left: 545px;
+    width: 100px;
+    height: 40px;
+    color:#FFFFFF;
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 16px;
+    background-color: #9747FF;
+    border: none;
+    border-radius: 15px;
+}
+
+.spacer {
+    color:#FFFFFF;
+    height: 30px;
+    position: absolute;
+    top: 1880px;
+    width: 100px;
+}
+
+#profile-filled-h4 {
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    top: 177px;
+    left: 240px;
+    color: white;
+    background-color: #9747FF;
+    border-radius: 10px;
+    width: 110px;
+    padding-left:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+
+}

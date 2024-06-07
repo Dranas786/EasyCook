@@ -1,0 +1,553 @@
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <script src="practice.js"></script> -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/logo.png"/>
+    </head>
+        <head>
+            <head>
+                <link rel="stylesheet" href="viewRecipe.css">         
+        </head>
+        <body style="background-color: whitesmoke;">
+            <title id="viewRecipeName"> Crepes </title>
+            <nav style="position: fixed; top:2px; left: 0; right: 0;">
+                <a onclick="window.history.go(-1); return false;" style="cursor: pointer;">
+                    <img src ="assets/left arrow icon.png" alt="Go back" width="35px" height="35px"/>
+                </a>
+                <a href="index.html">
+                    <img src ="assets/home.png" alt="Go Home" width="30px" height="30px" class="homeIcon"/>
+                </a>
+                <a href="authentication.html">
+                    <img src ="assets/user.png" alt="user" width="30px" height="30px" class="profileIcon"/>
+                </a>
+            </nav>
+        <div class="outerbox">
+            <h1 id="Recipe-title"> Potato Skins </h1>
+            <div style="text-align: center; font-size: 23px; font-family: 'Inter', sans-serif; margin-bottom: 5px;">
+                <p style="display: inline;"> Author:</p>
+                <a href="" id="recipe-author"> Sophia Miller</a>
+            </div>
+            <div style="text-align: center; font-size: 20px; font-family: 'Inter', sans-serif; margin-bottom: 20px;">
+                <p style="display: inline;"> Date Posted: November 5, 2023</p>
+            </div>
+            <!-- <img src="assets/spicy-honey-garlic-chicken.webp" alt= "Garlic Honey Chicken" width="500" height="400" class="center"> -->
+            <img src="https://www.iheartnaptime.net/wp-content/uploads/2023/01/Potato-Skins-I-Heart-Naptime-6.jpg" alt= "Potato Skins" width="600" height="400" class="center" id="uploaded-image">
+            <div id="cookTime">
+                <table style="display: flex; justify-content: center; margin-top: 20px;">
+                    <td>
+                        <div style="margin-right:40px; margin-left: 90px;">
+                            <p style="margin: 0.2em 0; font-size: 25px; font-family: 'Inter', sans-serif; margin-right: 40px; font-weight:bold; margin-top: 11px; display: flex; justify-content: center; margin-bottom: 0;"> Rating</p>
+                            <div style="padding-top:7px;">
+                                <p style="display: inline-flex; vertical-align: middle; margin-bottom:22.5px; font-size: 20px; font-family: 'Inter'" id="rating">(20)</p>
+                                <img src="assets/filledStarRating.png" width="30px" height="30px"  id="1update">
+                                <img src="assets/filledStarRating.png" width="30px" height="30px"  id="2update">
+                                <img src="assets/filledStarRating.png" width="30px" height="30px"  id="3update">
+                                <img src="assets/unfilledStarRating.png" width="30px" height="30px"  id="4update">
+                                <img src="assets/unfilledStarRating.png" width="30px" height="30px"  id="5update">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div style="margin-right:40px; margin-left: 40px;">
+                            <p class="cookTimeAlign">Prep Time </p>
+                            <p class="cookTimeAlignInner">10 minutes</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div style="margin-right:40px; margin-left: 40px;">
+                            <p class="cookTimeAlign">Cook Time </p>
+                            <p class="cookTimeAlignInner">20 minutes</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div style="margin-right:80px; margin-left: 40px;">
+                            <p class="cookTimeAlign">Total Time </p>
+                            <p class="cookTimeAlignInner">30 minutes</p>
+                        </div>
+                    </td>
+                </table>
+            </div>
+
+            <div style="width: 800px; height: 100px; background-color: rgb(255, 255, 255); font-size: 20px; font-family: 'Inter', sans-serif;margin-top: 15px; text-align: center;" class="center">
+                <p> A Ultimate Potato Skins Extravaganza, a tantalizing experience that brings together the humble potato and a symphony of flavors. These meticulously crafted potato skins are a culinary masterpiece, destined to be the star of your next gathering.</p>
+            </div>
+            <h2>Tags: 
+                <div id="tagParent" style="display: inline-block;">
+                </div>
+                <script>
+                    const tagText = '[ "Appetizer","Vegetarian" ]';                    
+                    const tagArr = JSON.parse(tagText);
+                    let divTagParent=document.getElementById("tagParent");
+                    
+                    for(var i=0; i < tagArr.length; i++){
+                        var newDiv = document.createElement('div');
+                        newDiv.id = 't'+i;
+                        newDiv.className = 'tags';
+                        newDiv.innerHTML=tagArr[i];
+                        divTagParent.append(newDiv);
+                    }    
+
+                </script>
+            </h2>
+
+            <h2> Ingredients:
+                <div id="parent" style="display: inline-block" >
+
+                </div>
+                <script>
+                    const text = '[ "Russet potatoes", "Olive oil", "Salt","Ground pepper", "Cheese", " Sour cream", "Green onions"]';                   
+                    const myArr = JSON.parse(text);
+                    let divInstructionParent=document.getElementById("parent");
+                    
+                    for(var i=0; i < myArr.length; i++){
+                        var newDiv = document.createElement('div');
+                        newDiv.id = 'r'+i;
+                        newDiv.className = 'tags';
+                        newDiv.innerHTML=myArr[i];
+                        divInstructionParent.append(newDiv);
+                    }    
+
+                </script>
+            </h2>
+                <script>
+                    const texMeasurement='[{"number":3,"unit":" ","ingredient":"Russet potatoes","sub":[{"number":3,"unit":" ","ingredient":"Yukon gold potatoes"}]},{"number":3,"unit":" tbsp ","ingredient":"Olive oil","sub":[{"number":3,"unit":" tbsp ","ingredient":"Canola oil"}]},{"number":"Pinch","unit":" of ","ingredient":"Salt for each potato","sub":""},{"number":"Pinch","unit":" of ","ingredient":"Black pepper for each potato","sub":""},{"number":1,"unit":" cup ","ingredient":"Cheese","sub":""},{"number":0.5,"unit":" cup ","ingredient":"Sour cream","sub":""},{"number":1,"unit":" ","ingredient":"Green onion","sub":""}]';                        
+                </script>
+                <!-- <div style="text-align: right;">(e.g. convert from cups to grams)</div> -->
+
+                <div class="dropdown" style="margin-top: 40px;">
+                    <button class="dropbtn">Measurement Converter 
+                    <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a onclick="gramsToCupTest(texMeasurement)" style="display: none;" id="gramToCups">Grams to Cups</a>
+                        <a onclick="cupsToGrams(texMeasurement)" style="display: none;" id="cupsToGrams">Cups to Grams</a>
+                        <a onclick="cupsToMl(texMeasurement)" style="display: none;" id="cupsToMl">Cups to Milliliters</a>
+                        <a onclick="mlToCups(texMeasurement)" style="display: none;" id="mlToCups">Milliliters to Cups</a>
+                        <a onclick="lbToGrams(texMeasurement)" style="display: none;" id="lbToGrams">lb to Grams</a>
+                        <a onclick="gramsToLb(texMeasurement)" style="display: none;" id="GramsToLb">Grams to lb</a>
+                    </div>
+                </div> 
+                <!-- <p style="float:right; display: inline-flex; margin-top: 80px;">(e.g. convert from cups to grams)</p> -->
+
+                <h2> Measurements: </h2>
+
+                <table id="overallMeasurements">
+                </table>
+                    <script>
+                    const textMeasurement='[{"number":3,"unit":" ","ingredient":"Russet potatoes","sub":[{"number":3,"unit":" ","ingredient":"Yukon gold potatoes"}]},{"number":3,"unit":" tbsp ","ingredient":"Olive oil","sub":[{"number":3,"unit":" tbsp ","ingredient":"Canola oil"}]},{"number":"Pinch","unit":" of ","ingredient":"Salt for each potato","sub":""},{"number":"Pinch","unit":" of ","ingredient":"Black pepper for each potato","sub":""},{"number":1,"unit":" cup ","ingredient":"Cheese","sub":""},{"number":0.5,"unit":" cup ","ingredient":"Sour cream","sub":""},{"number":1,"unit":" ","ingredient":"Green onion","sub":""}]';                       
+                    const MeasurementArr = JSON.parse(textMeasurement);
+                    let divMeasurementParent=document.getElementById("overallMeasurements");
+                        printMeasurements();
+                    function printMeasurements(){
+                        for(var i=0; i < MeasurementArr.length; i++){
+                            var newDiv = document.createElement('div');
+                            newDiv.className = "measurementPara";
+                            let new_row = document.createElement("tr");
+                
+                            
+                            var outerNumberDiv = document.createElement('div');
+                                var outerUnitDiv= document.createElement('div');
+                                var outerIngredient = document.createElement('div');
+                                outerNumberDiv.className="forSubPara"; 
+                                outerUnitDiv.className="unitAlign"; 
+                               
+                                outerNumberDiv.id="number"+i;
+                                outerUnitDiv.id="unit"+i;
+
+
+                                outerNumberDiv.innerHTML=MeasurementArr[i].number;
+                                outerUnitDiv.innerHTML=MeasurementArr[i].unit;
+                                new_row.append(outerNumberDiv);
+                                new_row.append(outerUnitDiv);
+                                
+                            if(MeasurementArr[i].sub!=""){
+                                var dropdownElement=document.createElement('select');
+                                var addFirst = document.createElement('option');
+                                
+                                addFirst.value=MeasurementArr[i].ingredient;
+                                addFirst.innerHTML=MeasurementArr[i].ingredient;
+                                dropdownElement.append(addFirst);
+                                dropdownElement.className="subDropdown";
+                                for(var j=0; j < MeasurementArr[i].sub.length; j++){
+                                    var testDiv = document.createElement('option');
+                        
+                                    testDiv.value=MeasurementArr[i].sub[j].ingredient;
+                                    testDiv.innerHTML=MeasurementArr[i].sub[j].ingredient;
+                                   
+                                    new_row.append(dropdownElement);
+                                    dropdownElement.append(testDiv);
+                           
+                                    overallMeasurements.append(new_row);
+                                }
+                                dropdownElement.onchange=function(){MDropdownClicked(this.value, textMeasurement);};   
+
+                            }
+                            else{
+                                outerIngredient.innerHTML=MeasurementArr[i].ingredient;
+
+                                outerIngredient.className="unitAlign"; 
+                                outerIngredient.id="ingredient"+i;
+                                new_row.append(outerIngredient);
+                               
+                                divMeasurementParent.append(new_row);
+
+                            }
+                        }
+                    }
+
+                                    gramToCups.style.display="block";
+                                    cupsToGrams.style.display="block";
+                                    
+                    </script>
+                
+            <h2> Instructions:</h2>
+                    <script>
+                        const instructionJ='[{"instruction":"Thoroughly wash the potatoes and use oven or microwave to cook them. If you are using a oven pierce ur potato a few times and rub with olive oil to bake at 350 degrees fahrenheit ","image":"https://www.seriouseats.com/thmb/LzxTtiSph4jdjlvCrKNBrUrmDIM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2016__10__20161004-baked-potato-vicky-wasik-3-1500x1125-5fae257054de4aedb5649c9b4ae79f85.jpg"},{"instruction":"Once potatoes have cooked cut them in half and let them cool. Once they have finished cooling scoop them out into a bowl to save for later","image":"https://www.allrecipes.com/thmb/WgKjs40vRgXHbsS-WH4uu9CWHvA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/24332-ultimate-twice-baked-potato-DDMFS-step-04-1603-24ea1395b2804e2da24fa1dd805c44df.jpg"},{"instruction":" Put the potatoes onto a baking rack and let them cook on each side for 10 mins in the oven for 400 degrees fahrenheit","image":""},{"instruction":" Once they have finished baking add ur cheese, season with salt and pepper and broil for 2 minutes. Feel free to use the potatoes you scooped out to be mixed with ur cheese and seasoning before stuffing the potato skins","image":""},{"instruction":"Serve the potatoes with sourcream and sliced green onion along with any of ur favourite toppings","image":""}]';                        
+                        const instructionAr = JSON.parse(instructionJ);
+                    </script>
+                <div style="align-content: center; margin-bottom: 5px; margin-top: 15px; display: flex;" id="startFollowDiv">
+                    <button class="startIcon" id="startFollowAlong" onclick="followAlongClicked(instructionAr.length)" >
+                        <img src="https://uxwing.com/wp-content/themes/uxwing/download/video-photography-multimedia/play-button-green-icon.png" alt="start button" style="border: 0; width: 30px; height:30px;">
+                    </button>
+                    <p class="start-button-text" style="vertical-align:middle; padding-bottom: 5px; padding-top: 10px;" id="startFollowText">
+                        Start recipe follow along mode
+                        
+                    </p>
+                <!-- TOOLTIP -->
+                    <div class="tooltip" id="startToolTip" style="display: block;">
+                        <img src="assets/followAlongToolIcon.png" style=" width: 30px; height: 30px; display: inline; padding-left: 60px; padding-top: 7px;"> 
+                        <span class="tooltiptext"> Here is how to use the 
+                            <p style="color: blueviolet;">
+                                Recipe Follow Along Mode
+                            </p>
+                            <p style="text-align: left; margin-bottom: 5px;">
+                                1.
+                                <img src="https://uxwing.com/wp-content/themes/uxwing/download/video-photography-multimedia/play-button-green-icon.png" width="10px" height="10px">
+                                Press the start button
+                            </p>
+                            <p style="text-align: left; display: block;">2. After completing a step click the checkbox beside the step you have completed
+                                <img src="assets/checkbox.png" width=20px height="20px" style="padding-left: 100px; margin-bottom: 5px; display: block;">
+
+                            </p> 
+                            <div style="display: inline; float: left;">
+                                <p style="text-align: left; margin-bottom: 5px; display: inline;">3. Click <div class="endIcon" style="width: 10px; height: 10px; margin: 0; padding: 0;"></div>
+                                    to stop any time 
+                                </p>
+                            </div>
+                        </span>
+                    </div>
+                </div>   
+                <div style="align-content: center;  margin-bottom: 5px; padding-bottom: 10px; display: flex;">
+                    <button class="endIcon" id="endFollowButton" style="display: none;" onclick="endFollowAlongClicked(instructionAr.length)"></button>
+                    <p class="start-button-text" style="vertical-align:middle; padding-bottom: 5px; display:none;padding-top: 10px;" id="endFollowText" >
+                        End recipe follow along mode
+                    </p>
+                    <div class="tooltip" id="endToolTip" style="display: none;">
+                        <img src="assets/followAlongToolIcon.png" style=" width: 30px; height: 30px; display: inline; padding-left: 60px; padding-top: 7px;"> 
+                        <span class="tooltiptext"> Here is how to use the 
+                            <p style="color: blueviolet;">
+                                Recipe Follow Along Mode
+                            </p>
+                            <p style="text-align: left; margin-bottom: 5px;">
+                                1.
+                                <img src="https://uxwing.com/wp-content/themes/uxwing/download/video-photography-multimedia/play-button-green-icon.png" width="10px" height="10px">
+                                Press the start button
+                            </p>
+                            <p style="text-align: left; display: block;">2. After completing a step click the checkbox beside the step you have completed
+                                <img src="assets/checkbox.png" width=20px height="20px" style="padding-left: 100px; margin-bottom: 5px; display: block;">
+
+                            </p> 
+                            
+
+                            
+                            <div style="display: inline; float: left;">
+                                <p style="text-align: left; margin-bottom: 5px; display: inline;">3. Click <div class="endIcon" style="width: 10px; height: 10px; margin: 0; padding: 0;"></div>
+                                    to stop any time 
+                                </p>
+                            </div>
+                        </span>
+                    </div>
+                </div>                  
+                <div>
+                    <table id="instructionsTable">
+            
+                    </table>
+                </div>
+                <script>
+                        const instructionJson='[{"instruction":"Thoroughly wash the potatoes and use oven or microwave to cook them. If you are using a oven pierce ur potato a few times and rub with olive oil to bake at 350 degrees fahrenheit ","image":"https://www.seriouseats.com/thmb/LzxTtiSph4jdjlvCrKNBrUrmDIM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2016__10__20161004-baked-potato-vicky-wasik-3-1500x1125-5fae257054de4aedb5649c9b4ae79f85.jpg"},{"instruction":"Once potatoes have cooked cut them in half and let them cool. Once they have finished cooling scoop them out into a bowl to save for later","image":"https://www.allrecipes.com/thmb/WgKjs40vRgXHbsS-WH4uu9CWHvA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/24332-ultimate-twice-baked-potato-DDMFS-step-04-1603-24ea1395b2804e2da24fa1dd805c44df.jpg"},{"instruction":" Put the potatoes onto a baking rack and let them cook on each side for 10 mins in the oven for 400 degrees fahrenheit","image":""},{"instruction":" Once they have finished baking add ur cheese, season with salt and pepper and broil for 2 minutes. Feel free to use the potatoes you scooped out to be mixed with ur cheese and seasoning before stuffing the potato skins","image":""},{"instruction":"Serve the potatoes with sourcream and sliced green onion along with any of ur favourite toppings","image":""}]';                        
+                    const instructionArr = JSON.parse(instructionJson);
+                    for (let i = 0; i < instructionArr.length; i++) {
+                    // Create new row for each instruction
+                    let instructionRow = document.createElement("tr");
+
+                    // Add cell for Checkbox and Step number
+                    let checkboxStepCell = document.createElement('td');
+                    checkboxStepCell.className = 'instructionStepPara'; // Apply necessary class for styling
+
+                    let checkbox = createCheckbox(); // Function to create checkbox
+                    checkbox.className = 'instructionCheckbox'; // Apply necessary class for checkbox styling
+                    checkbox.id=i+"checkbox";
+                    checkbox.style.display='none';
+                    checkbox.setAttribute("onclick",`checkboxClicked(this.id)`);
+                    let stepDiv = document.createElement('div');
+                    stepDiv.className = 'stepDivWrapper'; // Apply a class to style the wrapper div
+                    let inc = i + 1;
+                    stepDiv.innerHTML = "Step " + inc; // Create label for step number
+                    stepDiv.id=i+"step";
+                    stepDiv.insertBefore(checkbox, stepDiv.firstChild); // Insert checkbox before the step number
+                    checkboxStepCell.appendChild(stepDiv);
+                    instructionRow.appendChild(checkboxStepCell);
+
+                    instructionsTable.appendChild(instructionRow);
+
+                    // Add row for Instruction
+                    let instructionTextRow = document.createElement("tr");
+
+                    // Add cell for Instruction
+                    let instructionCell = document.createElement("td");
+                    instructionCell.colSpan = 2; // Set the colspan to cover 2 columns for the instruction
+                    instructionCell.innerHTML = instructionArr[i].instruction;
+                    instructionCell.className = "instructionPara";
+                    instructionCell.id=i+"instruction";
+                    instructionTextRow.appendChild(instructionCell);
+
+                    instructionsTable.appendChild(instructionTextRow);
+
+                    if (instructionArr[i].image !== "") {
+                        let imageRow = document.createElement("tr");
+                        let imageCell = document.createElement("td");
+                        imageCell.colSpan = 2; // Set the colspan to cover 2 columns for the image
+                        imageCell.appendChild(createImage(instructionArr[i].image));
+                        imageRow.appendChild(imageCell);
+                        instructionsTable.appendChild(imageRow);
+                    }
+                }
+
+                function createCheckbox(i) {
+                    var checkbox = document.createElement('input');
+                    checkbox.type = 'checkbox';
+                    checkbox.style.display='inline';
+                    return checkbox;
+                }
+
+                function createImage(src) {
+                    var image = document.createElement('img');
+                    image.className = "instructionImage";
+                    image.src = src;
+                    return image;
+                }
+
+                </script>
+                
+                <div style="margin-right:40px; margin-left: 90px; margin-bottom: 30px;">
+                    <p style="margin: 0.2em 0; font-size: 25px; font-family: 'Inter', sans-serif; margin-right: 40px; font-weight:bold; margin-top: 11px; display: flex; justify-content: center; margin-bottom: 0;"> Rate this recipe?</p>
+                    <div style="padding-top:7px;  display: flex; justify-content: center; padding-right: 50px;">
+                        <img src="assets/unfilledStarRating.png"id="1"; onclick="notLoggedChangeStar(this.id)" width="30px" height="30px" style="display: block;">
+                        <img src="assets/filledStarRating.png" id="1star" onclick="notLoggedChangeStar(this.id)" width="30px" height="30px" style="display: none;">
+
+                        <img src="assets/unfilledStarRating.png"id="2"; onclick="notLoggedChangeStar(this.id)" width="30px" height="30px" style="display: block;">
+                        <img src="assets/filledStarRating.png" id="2star" onclick="notLoggedChangeStar(this.id)" width="30px" height="30px" style="display: none;">
+
+                        <img src="assets/unfilledStarRating.png"id="3"; onclick="notLoggedChangeStar(this.id)" width="30px" height="30px" style="display: block;">
+                        <img src="assets/filledStarRating.png" id="3star" onclick="notLoggedChangeStar(this.id)" width="30px" height="30px" style="display: none;">
+
+                        <img src="assets/unfilledStarRating.png"id="4"; onclick="notLoggedChangeStar(this.id)" width="30px" height="30px" style="display: block;">
+                        <img src="assets/filledStarRating.png" id="4star" onclick="notLoggedChangeStar(this.id)" width="30px" height="30px" style="display: none;">
+
+                        <img src="assets/unfilledStarRating.png"id="5"; onclick="notLoggedChangeStar(this.id)" width="30px" height="30px" style="display: block;">
+                        <img src="assets/filledStarRating.png" id="5star" onclick="notLoggedChangeStar(this.id)"width="30px" height="30px" style="display: none;">
+                        <!-- <button class="ratingDoneButton" id="ratingButton" onclick="submitRating()" style="display: none;">Submit Rating</button> -->
+                    </div>
+                    <p style="margin: 0.2em 0; font-size: 20px; font-family: 'Inter', sans-serif; margin-right: 40px; font-weight:bold; margin-top: 11px; padding-left: 450px; margin-bottom: 0; color: red; display: none;" id="submitRatingError"> Please select atleast one star. </p>
+                    <p style="margin: 0.2em 0; font-size: 20px; font-family: 'Inter', sans-serif; margin-right: 40px; font-weight:bold; margin-top: 11px; padding-left: 450px; margin-bottom: 0; color: rgb(0, 0, 0); display: none;" id="submitRatingDone"> Rating submitted</p>
+                    <p style="margin: 0.2em 0; font-size: 20px; font-family: 'Inter', sans-serif; margin-right: 40px; font-weight:bold; margin-top: 11px; padding-left: 450px; margin-bottom: 0; color: rgb(0, 0, 0); display: none;" id="alredySubmittedRating"> Your rating has already been submitted </p>
+                 <div style="display: flex; justify-content: center; height: auto; width: auto;"> 
+                    <p style="margin: 0.2em 0; font-size: 20px; font-family: 'Inter', sans-serif; margin-right: 6px; font-weight:bold; margin-top: 11px; margin-bottom: 0; color: rgb(0, 0, 0);" id="loginSignUpMessage"> Please</p>
+                    <a href="authentication.html" style="display: inline; margin: 0.2em 0; font-size: 20px;margin-right: 6px; font-family: 'Inter', sans-serif;  font-weight:bold;  margin-bottom: 0; margin-top: 11px; color: blueviolet; ">login/sign-up</a>
+                    <p style="margin: 0.2em 0; font-size: 20px; font-family: 'Inter', sans-serif; margin-right: 40px; font-weight:bold; margin-top: 11px; margin-bottom: 0; color: rgb(0, 0, 0); display: inline;" id="loginSignUpMessage"> to rate, favourite, and write a comment/question </p>
+                </div> 
+                </div>
+            <div class="btn-group">
+                <button id="comment-button" onclick="notLoggedCQButton(this.id)">Comments</button>
+                <button id="question-button" onclick="notLoggedCQButton(this.id)">Questions</button>
+            </div>
+            
+            <div class="form-flex">
+                <div class="aligning-box">
+                    <div id="comments" >
+                        <div class="scrollbar">
+                            <table id="comment-table">
+                                <div id="noComments" style="font-size: 30px; vertical-align: middle;" style="display: none;"></div>
+                                <tr>
+                                    <td>
+                                        <div class="comment-question-group">
+                                            <div class="comment-question-dates"> Date: November 26, 2023 </div>
+                                            <div class="user" style="display: inline-flex; background:url(https://images.pexels.com/photos/4098157/pexels-photo-4098157.jpeg?auto=compress&cs=tinysrgb&w=600); background-size: contain;"></div>
+                                            <div class="alignTextBesidePFP">
+                                                <div style="display: inline;"> Jan Levinson </div>
+                                            </div>
+                                            <div style="margin-top: 10px;">
+                                                Great recipe! The potatoes just ended up a little dry   
+                                            </div>
+                                            <a onclick=""  class="replyLink">Replies/Reply</a>  
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="comment-question-group">
+                                            <div class="comment-question-dates"> Date: November 27, 2023 </div>
+                                            <div class="user" style="display: inline-flex; background:url(https://www.nbc.com/sites/nbcblog/files/2023/07/rainn-wilson-the-office2.jpg); background-size: cover;  background-repeat: no-repeat; "></div>
+                                            <div class="alignTextBesidePFP">
+                                                <div style="display:inline;"> Dwight Schrute </div>  
+                                            </div> 
+                                            <div style="margin-top: 10px;">The potato skins were super crispy! The Kids loved the recipe. </div>
+                                            <a onclick=""  class="replyLink">Replies/Reply</a>  
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="comment-question-group">
+                                            <div class="comment-question-dates"> Date: December 3, 2023 </div>
+                                            <div class="user" style="display: inline-flex; background:url(https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-cooking-home-appliance-flaticons-lineal-color-flat-icons.png); background-size: cover;  background-repeat: no-repeat;"></div>
+                                            <div class="alignTextBesidePFP">
+                                                <div style="display:inline;"> Rachel Green </div>  
+                                            </div> 
+                                            <div style="margin-top: 10px;"> Loved it! </div>
+                                            <a onclick=""  class="replyLink">Replies/Reply</a>  
+                                        </div>
+                                    </td>
+                                </tr>
+                                <div class="comment-question-group">
+                                    <div class="comment-question-dates"> Date: November 29, 2023 </div>
+
+                                    <div class="user" style="display: inline-flex; background:url(https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg?auto=compress&cs=tinysrgb&w=600); background-size: contain;"></div>
+                                    <div class="alignTextBesidePFP">
+                                    <div style="display:inline;"> Emma Stone </div>
+                                    </div>
+                                    <div style=" margin-top: 10px;">
+                                        I loved this Recipe!   
+                                    </div> 
+                                    <a onclick=""  class="replyLink">Replies/Reply</a>  
+                                </div>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="questions" style="display: none">
+                        <div class="scrollbar">
+                            <table id="question-table">
+                                <div id="noQuestions" style="font-size: 30px; vertical-align: middle;" style="display: none;"></div>
+                                <tr>
+                                    <td>
+                                        <div class="comment-question-group">
+                                            <div class="comment-question-dates"> Date: November 26, 2023 </div>
+                                            <div class="user" style="display: inline-flex; background:url(https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=600);  background-size: cover;  background-repeat: no-repeat;"></div>
+                                            <div class="alignTextBesidePFP">
+                                            <div style="display:inline;"> Sam Baker </div>
+                                            </div>
+                                            <div style="margin-top: 10px;">
+                                                Do you know what I can do to make the potatoes a little less dry?
+                                            </div>
+                                            <a onclick="displayReply()"  class="replyLink">Replies/Reply</a>  
+                                        </div>
+                                    </td>
+                                    <tr>
+                                        <td>
+                                            <div class="replyDivPotatoes" id="replySam" style="display: none;  margin-bottom: 20px;">
+                                                <h3> Replies </h3>
+                                                <div class="reply-group">
+                                                    <div class="comment-question-dates"> Date: November 26, 2023 </div>
+                                                    <div class="user" style="display: inline-flex; background:url(https://static.vecteezy.com/system/resources/thumbnails/020/015/744/original/new-york-city-skyline-time-lapse-from-roof-top-with-urban-skyscrapers-new-york-usa-free-video.jpg); background-size: cover;  background-repeat: no-repeat;"></div>
+                                                    <div class="alignTextBesidePFP">
+                                                        <div style="display:inline;"> Peter Parker </div>
+                                                    </div>
+                                                    <div style="margin-top: 10px;">
+                                                        I recommend using more oil when you are baking them and just making sure you dont over bake them should do the trick.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td> 
+                                    </tr>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="comment-question-group">
+                                            <div class="comment-question-dates"> Date: November 29, 2023 </div>
+                                            <div class="user" style="display: inline-flex; background:url(https://www.nbc.com/sites/nbcblog/files/2022/07/the-office-how-to-watch.jpg);  background-size: cover;  background-repeat: no-repeat;"></div>
+                                            <div class="alignTextBesidePFP">
+                                            <div style="display:inline;"> Michael Scott </div>
+                                            </div>
+                                            <div style=" margin-top: 10px;">
+                                                Does anyone know if bacon goes well with this?
+                                            </div> 
+                                            <!-- <a onclick=""  class="replyLink">Replies</a>   -->
+                                            <a onclick="displayReplyNone()"  class="replyLink">Replies/Reply</a>  
+                                        </div>
+                                    </td>
+                                    <tr>
+                                        <td>
+                                            <div class="replyDiv" id="replies0" style="display: none;  height: 50px;  margin-top: 10px; border-top-right-radius: 15px; border-top-left-radius: 15px;">
+                                                <h3> This comment currently has 0 replies </h3>
+                                                </div>
+                                            </div>
+                                        </td> 
+                                    </tr>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="comment-question-group">
+                                            <div class="comment-question-dates"> Date: November 29, 2023 </div>
+                                            <div class="user" style="display: inline-flex; background:url(https://images.pexels.com/photos/4098157/pexels-photo-4098157.jpeg?auto=compress&cs=tinysrgb&w=600);  background-size: cover;  background-repeat: no-repeat;"></div>
+                                            <div class="alignTextBesidePFP">
+                                                <div style="display:inline;"> Jan Levinson </div>
+                                            </div>
+                                            <div style="margin-top: 10px;">
+                                                Has anyone tried baking with the Yukon gold potatoes, I was wondering well do the yukon gold potatoes bake?
+                                            </div> 
+                                            <a onclick=""  class="replyLink">Replies/Reply</a>  
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+            <div>
+                <form style="display: flex;" class="form-flex">
+                    <div class="input-container">
+                        <textarea type="text" id="input" placeholder="please login/sign up to write a comment..." class="inputField" disabled></textarea>
+                        <!-- <button type="button" id="submit" onclick="insert_result_comment()" class="submit-button" ></button> -->
+                        <textarea type="text" id="inputQuestion" placeholder="please login/sign up to write your question..." class="inputField" style="display: none;" disabled></textarea>
+                        <!-- <button type="button" id="submitQuestion" onclick="insert_result_question()"class="submit-button"  style="display: none;"></button> -->
+                    </div>
+                </form>     <!-- </div> -->
+                <p id="errorCharMsg"; style=" color: brown; font-size: 20px; font-family: 'Inter', sans-serif; padding-left:250px; display: none;"> Comment must be more then 3 characters!</p>
+                <p id="errorCharMsgQuestion"; style=" color: brown; font-size: 20px;  font-family: 'Inter', sans-serif; padding-left:250px; display: none;"> Question must be more then 9 characters!</p>
+
+            </div>
+            
+            <div style="display: flex; justify-content: center;">
+               
+                <p style="font-size: 30px;  font-family: 'Inter', sans-serif;">
+                    Favourite This Recipe?
+                </p> 
+            </div>
+            <div style="display: flex; justify-content: center; margin-top: 10px;">
+                <img src="assets/bookmark.png" id="bookmark" style="width: 40px; height: 40px; margin-bottom: 30px;" onclick="notLoggedFavourite()">
+                <img src="assets/redBookmark.png" id="clickedBookmark" style="width: 40px; height: 40px; margin-bottom: 30px; display: none;" onclick="notLoggedFavourite()">
+            </div>
+            <div style="display:flex; justify-content: center;">
+                <a id="signlogMessage" href="authentication.html" style=" margin-bottom: 30px; font-size: 20px; font-family: 'Inter', sans-serif; cursor: pointer; color: blueviolet; display: none;"> Click here to login/sign-up </a>
+            </div>
+                <div id="recipe-category-select" style="display:none;">MainDishes</div>
+
+        </div> 
+        <script src="viewRecipe.js"></script>
+    </body> 
+</html> 

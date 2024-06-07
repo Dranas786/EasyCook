@@ -1,0 +1,133 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-container {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+h1 {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.form-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.form-toggle button {
+    background: none;
+    border: 2px solid #9747FF;
+    color: #9747FF;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.form-toggle button:disabled {
+    color: white;
+    background: #9747FF;
+    cursor: default;
+}
+
+.form-toggle button:not(:disabled):hover {
+    background: #9747FF;
+    color: white;
+}
+
+.form-container {
+    display: none;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #9747FF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: darkviolet;
+}
+
+.form-footer {
+    font-size: 0.9em;
+    color: #333;
+    margin-top: 10px;
+}
+
+.form-footer a {
+    color: #9747FF;
+    text-decoration: none;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+.help-center {
+    margin-top: 20px;
+}
+
+.help-center a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.help-center a:hover {
+    text-decoration: underline;
+}
+
+#signup-form {
+    display: block;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    height: 20px;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.form-toggle button.active {
+    background: #9747FF;
+    color: white;
+}

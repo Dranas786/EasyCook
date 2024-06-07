@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>EasyCook</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/logo.png"/>
+</head>
+<body>
+    <button id="moveLeftAppetizer" type="button" onclick="buttonScrollAppetizer()"></button>
+            <button id="moveRightAppetizer" type="button" onclick="buttonScrollAppetizer()"></button>
+
+            <button id="moveLeftMain" type="button" onclick="buttonScrollMain()"></button>
+            <button id="moveRightMain" type="button" onclick="buttonScrollMain()"></button>
+
+            <button id="moveLeftDessert" type="button" onclick="buttonScrollDessert()"></button>
+            <button id="moveRightDessert" type="button" onclick="buttonScrollDessert()"></button>
+    <div class="side-panel">
+        <button id="home-button">
+            <svg id="home-icon" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30.3081 16.1708L17.1185 2.99085C17.0236 2.89569 16.9108 2.8202 16.7866 2.76869C16.6624 2.71719 16.5293 2.69067 16.3948 2.69067C16.2604 2.69067 16.1273 2.71719 16.0031 2.76869C15.8789 2.8202 15.7661 2.89569 15.6712 2.99085L2.48164 16.1708C2.09738 16.555 1.87964 17.077 1.87964 17.6213C1.87964 18.7517 2.79865 19.6707 3.92899 19.6707H5.31872V29.0753C5.31872 29.6421 5.77662 30.1 6.34339 30.1H14.3455V22.9272H17.9319V30.1H26.4463C27.0131 30.1 27.471 29.6421 27.471 29.0753V19.6707H28.8607C29.4051 19.6707 29.927 19.4561 30.3113 19.0687C31.1086 18.2682 31.1086 16.9713 30.3081 16.1708Z"/>
+            </svg>  
+            <h2 id="home-title">Home</h2>          
+        </button>
+        <button id="about-button">
+            <svg id="about-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 2.625C11.7502 2.625 9.551 3.29213 7.68039 4.54203C5.80978 5.79193 4.35182 7.56847 3.49088 9.64698C2.62993 11.7255 2.40467 14.0126 2.84357 16.2192C3.28248 18.4257 4.36584 20.4525 5.95667 22.0433C7.54749 23.6342 9.57432 24.7175 11.7809 25.1564C13.9874 25.5953 16.2745 25.3701 18.353 24.5091C20.4315 23.6482 22.2081 22.1902 23.458 20.3196C24.7079 18.449 25.375 16.2498 25.375 14C25.3718 10.9841 24.1724 8.09271 22.0398 5.96018C19.9073 3.82764 17.0159 2.62818 14 2.625ZM10.0625 10.5C10.3221 10.5 10.5759 10.577 10.7917 10.7212C11.0075 10.8654 11.1758 11.0704 11.2751 11.3102C11.3744 11.5501 11.4004 11.814 11.3498 12.0686C11.2991 12.3232 11.1741 12.557 10.9906 12.7406C10.807 12.9241 10.5732 13.0491 10.3186 13.0998C10.064 13.1504 9.80006 13.1244 9.56023 13.0251C9.3204 12.9258 9.11542 12.7575 8.9712 12.5417C8.82698 12.3258 8.75 12.0721 8.75 11.8125C8.75 11.4644 8.88829 11.1306 9.13443 10.8844C9.38057 10.6383 9.71441 10.5 10.0625 10.5ZM19.1319 17.0625C18.0064 19.0083 16.1361 20.125 14 20.125C11.8639 20.125 9.9936 19.0094 8.86813 17.0625C8.80482 16.9629 8.76231 16.8515 8.74316 16.7351C8.724 16.6186 8.7286 16.4995 8.75668 16.3849C8.78476 16.2703 8.83573 16.1625 8.90653 16.0681C8.97733 15.9737 9.0665 15.8946 9.16867 15.8355C9.27084 15.7765 9.3839 15.7387 9.50105 15.7245C9.61819 15.7102 9.73701 15.7199 9.85035 15.7527C9.96369 15.7856 10.0692 15.8411 10.1605 15.9158C10.2519 15.9905 10.3272 16.0829 10.3819 16.1875C11.1989 17.5995 12.483 18.375 14 18.375C15.517 18.375 16.8011 17.5984 17.6181 16.1875C17.6728 16.0829 17.7481 15.9905 17.8395 15.9158C17.9308 15.8411 18.0363 15.7856 18.1497 15.7527C18.263 15.7199 18.3818 15.7102 18.499 15.7245C18.6161 15.7387 18.7292 15.7765 18.8313 15.8355C18.9335 15.8946 19.0227 15.9737 19.0935 16.0681C19.1643 16.1625 19.2153 16.2703 19.2433 16.3849C19.2714 16.4995 19.276 16.6186 19.2569 16.7351C19.2377 16.8515 19.1952 16.9629 19.1319 17.0625ZM17.9375 13.125C17.6779 13.125 17.4242 13.048 17.2083 12.9038C16.9925 12.7596 16.8243 12.5546 16.7249 12.3148C16.6256 12.0749 16.5996 11.811 16.6502 11.5564C16.7009 11.3018 16.8259 11.068 17.0094 10.8844C17.193 10.7009 17.4268 10.5759 17.6814 10.5252C17.936 10.4746 18.1999 10.5006 18.4398 10.5999C18.6796 10.6992 18.8846 10.8675 19.0288 11.0833C19.173 11.2992 19.25 11.5529 19.25 11.8125C19.25 12.1606 19.1117 12.4944 18.8656 12.7406C18.6194 12.9867 18.2856 13.125 17.9375 13.125Z"/>
+                </svg> 
+            <h2 id="about-title">About Us</h2>          
+        </button>
+        <button id="login-button">
+            <h2 id="login-title">Login / Sign Up</h2>          
+        </button>
+        <script>
+            document.getElementById('login-button').addEventListener('click', function() {
+                var destinationPage = 'authentication.html';
+                window.location.href = destinationPage;
+            });
+        </script>
+        <button id="help-button">
+            <svg id="help-icon" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_293_267)">
+                <path d="M8.50002 0.94458C7.00567 0.94458 5.54488 1.38771 4.30237 2.21792C3.05987 3.04814 2.09146 4.22815 1.51959 5.60875C0.947732 6.98935 0.798107 8.50852 1.08964 9.97415C1.38117 11.4398 2.10077 12.7861 3.15743 13.8427C4.2141 14.8994 5.56037 15.619 7.026 15.9105C8.49164 16.202 10.0108 16.0524 11.3914 15.4806C12.772 14.9087 13.952 13.9403 14.7822 12.6978C15.6124 11.4553 16.0556 9.99448 16.0556 8.50014C16.0556 6.49628 15.2595 4.57449 13.8426 3.15755C12.4257 1.74061 10.5039 0.94458 8.50002 0.94458ZM8.39613 13.1515C8.24202 13.1515 8.09138 13.1058 7.96325 13.0202C7.83511 12.9346 7.73524 12.8129 7.67627 12.6705C7.6173 12.5282 7.60187 12.3715 7.63193 12.2203C7.662 12.0692 7.73621 11.9304 7.84517 11.8214C7.95414 11.7124 8.09298 11.6382 8.24412 11.6082C8.39526 11.5781 8.55193 11.5935 8.6943 11.6525C8.83668 11.7115 8.95837 11.8113 9.04398 11.9395C9.1296 12.0676 9.17529 12.2183 9.17529 12.3724C9.17529 12.579 9.0932 12.7772 8.94708 12.9233C8.80096 13.0694 8.60278 13.1515 8.39613 13.1515ZM9.04307 9.34541V10.1576C9.04208 10.3228 8.97794 10.4814 8.8638 10.6008C8.74966 10.7202 8.59416 10.7914 8.42918 10.7999H8.37724C8.29374 10.803 8.21045 10.7896 8.13216 10.7604C8.05388 10.7312 7.98216 10.6868 7.92113 10.6297C7.8601 10.5726 7.81099 10.504 7.77661 10.4279C7.74224 10.3517 7.72329 10.2695 7.72085 10.186V8.88264C7.71307 8.80693 7.72074 8.73043 7.74341 8.65778C7.76608 8.58513 7.80327 8.51784 7.85273 8.45999C7.90218 8.40214 7.96288 8.35495 8.03112 8.32126C8.09937 8.28757 8.17374 8.2681 8.24974 8.26402C8.99113 8.20736 10.2236 7.93347 10.2236 6.7293C10.2236 5.86514 9.55779 5.27958 8.60391 5.27958C8.2423 5.28555 7.88626 5.36967 7.56022 5.52617C7.23418 5.68267 6.94585 5.90784 6.71502 6.18625C6.62771 6.27901 6.51479 6.34372 6.39061 6.37214C6.26644 6.40056 6.13661 6.39141 6.01765 6.34585C5.89869 6.30029 5.79596 6.22038 5.72253 6.11628C5.64911 6.01218 5.6083 5.8886 5.60529 5.76125C5.60808 5.58323 5.68106 5.41351 5.80835 5.28902C6.15904 4.88303 6.59449 4.55887 7.08402 4.3394C7.57356 4.11992 8.10526 4.01047 8.64168 4.01875C10.3889 4.01875 11.6072 5.10486 11.6072 6.66319C11.6072 8.10347 10.677 9.0668 9.04307 9.34541Z"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_293_267">
+                <rect width="17" height="17" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+            <h2 id="help-title">Help Center</h2>          
+        </button>
+    </div>
+
+    <div class="main-panel">
+        <div id="home-content" class="content">
+            <h1 id="home-h1">EasyCook</h1>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search for recipe (e.g. Sweet and sour pork)">
+                <div class="dropdown-container">
+                    <select class="diet-dropdown">
+                      <option value="" disabled selected>Dietary restrictions</option>
+                      <option value="">None</option>
+                      <option value="lactose-free">Lactose-free</option>
+                      <option value="gluten-free">Gluten-free</option>
+                      <option value="vegan">Vegan</option>
+                      <option value="vegetarian">Vegetarian</option>
+                    </select>
+                  </div>
+                  <div class="search-icon">&#128269;</div>
+            </div>
+            <div id="cards-container"></div>
+
+            <h1 id="Appetizers">Appetizers</h1>
+            <h1 id="MainDishes">Main Dishes</h1>
+            <h1 id="Desserts">Desserts</h1>
+        </div>
+
+        <div id="about-content" class="content">
+            <div id="about-center-align">
+                <h1 id="about-h1">Who we are</h1>
+                <h2 id="about-h2">Founded by Innovative Inc, and believing in the power of creativity to transform our society: EasyCook is an innovative solution for on-demand, interactive and personalized cooking guidance.</h2>
+                <hr id="first-line">
+                <h3 id="about-h3">“Empowering the world through digital evolution”</h3>
+                <hr id="second-line">
+            </div>
+            <h4 id="about-h4">With our recipe-centred system, you can:</h4>
+            <ul>
+                <li>Share your creations and discover recipes from fellow food enthusiasts.</li>
+                <li>Upload recipes with detailed ingredient lists, measurements, step-by-step instructions and visuals.</li>
+                <li>Search for specific recipes and save them for easy access to your personal favorites.</li>
+                <li>Interact with other users, learning from all levels of culinary expertise.</li>
+            </ul>
+            <img src="assets/about_page_img.png" alt="picture of chef using flour" id="about-img">
+        </div>
+
+        <div id="help-content" class="content">
+            <h1 id="help-h1">How Can We Help?</h1>
+            <p id="help-p">At EasyCook, we are dedicated to providing you with the ultimate user experience. Our commitment to
+                excellence extends beyond our services; it encompasses our unwavering support for you. Rest assured, our
+                team is here to assist you with any questions, concerns, or needs you may have. Your satisfaction is our
+                top priority, and we're honoured to be your partner on this journey.</p>
+
+            <h2 id="help-h2">Submit Help Request:</h2>
+            <form id="help-request-form">
+                <div id="help-first-row">
+                    <input type="text" id="help-form-name" name="fullName" placeholder="Full Name" required>
+                    <input type="email" id="help-form-email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="help-form-description" placeholder="Describe your concerns here..." required></textarea>
+                </div>
+                <button id="help-submit-button">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="mainpage.js"></script>
+</body>
+</html>
+
+

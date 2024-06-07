@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Let's Get Cooking! - Sign Up & Login</title>
+        <link rel="stylesheet" href="authentication.css">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/logo.png" />
+    </head>
+
+    <body>
+
+        <div class="page-container">
+            <h1>Let's Get Cooking!</h1>
+
+            <div class="form-toggle">
+                <button id="login-toggle" onclick="toggleForm('login')">Login</button>
+                <button id="signup-toggle" class="active" onclick="toggleForm('signup')">Sign Up</button>
+            </div>
+
+            <div id="login-form" class="form-container">
+                <h2>LOG IN</h2>
+                <input type="text" id="username" placeholder="Username" onkeypress="handleEnter(event, login)">
+                <div id="username-error" class="error-message"></div>
+                <input type="password" id="password" placeholder="Password" onkeypress="handleEnter(event, login)">
+                <div id="password-error" class="error-message"></div>
+                <button class="submit-btn" onclick="login(event)">Log In</button>
+                <p class="form-footer">Forgot password? <a href="#">Click here</a></p>
+            </div>
+
+            <div id="signup-form" class="form-container">
+                <h2>SIGN UP</h2>
+                <input type="text" id="signup-fullname" placeholder="Full Name">
+                <input type="text" id="signup-username" placeholder="Username" onkeypress="handleEnter(event, signup)">
+                <div id="signup-username-error" class="error-message"></div>
+                <input type="password" id="signup-password" placeholder="Password"
+                    onkeypress="handleEnter(event, signup)">
+                <div id="signup-password-error" class="error-message"></div>
+                <input type="password" id="signup-reenter-password" placeholder="Re-Enter Password"
+                    onkeypress="handleEnter(event, signup)">
+                <div id="signup-reenter-password-error" class="error-message"></div>
+                <button class="submit-btn" onclick="signup(event)">Sign Up</button>
+            </div>
+
+
+            <div class="help-center">
+                <a href="#">Help Center</a>
+            </div>
+        </div>
+
+        <script src="authentication.js"></script>
+
+    </body>
+
+</html>

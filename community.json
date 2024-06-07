@@ -1,0 +1,72 @@
+[
+  {
+    "star": "5",
+    "category": "Friend",
+    "image": "assets/user1.png",
+    "author": "James Smith",
+    "href": "https://www.facebook.com"
+  },
+  {
+    "star": "3",
+    "category": "Friend",
+    "image": "assets/user2.png",
+    "author": "Sarah Ross",
+    "href": "https://www.facebook.com"
+  },
+  {
+    "star": "1",
+    "category": "Friend",
+    "image": "assets/user3.png",
+    "author": "Oscar Brown",
+    "href": "https://www.facebook.com"
+  },
+  {
+    "star": "5",
+    "category": "Friend",
+    "image": "assets/user4.png",
+    "author": "Steve Radhorn",
+    "href": "https://www.facebook.com"
+  },
+  {
+    "star": "5",
+    "category": "Friend",
+    "image": "assets/user5.png",
+    "author": "Cat Larosa",
+    "href": "https://www.facebook.com"
+  },
+  {
+    "star": "5",
+    "category": "Friend",
+    "image": "assets/user6.png",
+    "author": "James Franco",
+    "href": "https://www.facebook.com"
+  },
+  {
+    "star": "3",
+    "category": "Friend",
+    "image": "assets/user7.png",
+    "author": "Sam Carmichael",
+    "href": "https://www.facebook.com"
+  },
+  {
+    "star": "1",
+    "category": "Friend",
+    "image": "assets/user8.png",
+    "author": "Ana Bee",
+    "href": "https://www.facebook.com"
+  },
+  {
+    "star": "5",
+    "category": "Friend",
+    "image": "assets/user9.png",
+    "author": "Katie Bright",
+    "href": "https://www.facebook.com"
+  },
+  {
+    "star": "5",
+    "category": "Friend",
+    "image": "assets/user10.png",
+    "author": "Ross Geller",
+    "href": "https://www.facebook.com"
+  }
+]
